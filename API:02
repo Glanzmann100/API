@@ -1,0 +1,18 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return """
+    <html>
+        <head><title>Minha API</title></head>
+        <body>
+            <h1>Bem-vindo à minha API!</h1>
+            <p>Esta é uma resposta HTML gerada diretamente pelo código Python.</p>
+        </body>
+    </html> 
+    """
+
+if __name__ == '__main__':
+    app.run(debug=True, port="8080")
